@@ -4,7 +4,7 @@
   "main": "modules",
   "scripts": {
     "build-global": "rm -rf build/global && NODE_ENV=production ./node_modules/.bin/webpack modules/index.js build/global/ReactRules.js && NODE_ENV=production COMPRESS=1 ./node_modules/.bin/webpack modules/index.js build/global/ReactRules.min.js && echo \"gzipped, the global build is `gzip -c build/global/ReactRules.min.js | wc -c` bytes\"",
-    "build-npm": "rm -rf build/npm && babel -d build/npm/lib ./modules && cp README.md build/npm && find build/npm/lib -type d -name __tests__ | xargs rm -rf && node -p 'p=require(\"./package\");p.main=\"lib\";p.scripts=p.devDependencies=undefined;JSON.stringify(p,null,2)' > build/npm/package.json",
+    "build-npm": "rm -rf build/npm && babel --experimental -d build/npm/lib ./modules && cp README.md build/npm && find build/npm/lib -type d -name __tests__ | xargs rm -rf && node -p 'p=require(\"./package\");p.main=\"lib\";p.scripts=p.devDependencies=undefined;JSON.stringify(p,null,2)' > build/npm/package.json",
     "build-examples": "./node_modules/.bin/webpack --context=./examples --config examples/webpack.config.production.js",
     "examples": "./node_modules/.bin/webpack-dev-server --content-base=./examples --context=./examples --config examples/webpack.config.js -d --hot --inline --display-error-details --colors --history-api-fallback --no-info",
     "test": "./node_modules/.bin/eslint ./modules && ./node_modules/.bin/karma start"
