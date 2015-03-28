@@ -6,6 +6,9 @@
   "authors": [
     "Sebastian Siemssen <fubhy@fubhy.com> (https://github.com/fubhy)"
   ],
+  "dependencies": {
+    "bootstrap": "~3.3"
+  },
   "license": "MIT",
   "ignore": [
     "**/.*",
