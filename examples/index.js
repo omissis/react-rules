@@ -1,8 +1,11 @@
 'use strict';
 
+import '../bower_components/bootstrap/dist/css/bootstrap.css';
+import '../bower_components/bootstrap/dist/css/bootstrap-theme.css';
+
 import React from 'react';
 import { default as Router, Route, Redirect, Link, RouteHandler } from 'react-router';
-import Demo from './demo';
+import Rule from './rule';
 
 window.React = React;
 
@@ -18,12 +21,11 @@ class App extends React.Component {
 
 var routes = (
   <Route handler={App} path="/">
-    <Route name="demo" handler={Demo} />
-    <Redirect from="/" to="demo" />
+    <Route name="rule" handler={Rule} />
+    <Redirect from="/" to="rule" />
   </Route>
 );
 
 Router.run(routes, Router.HashLocation, function (Handler) {
   React.render(<Handler/>, document.body);
 });
-

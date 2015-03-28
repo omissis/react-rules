@@ -24,7 +24,18 @@ module.exports = {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader'],
         exclude: /node_modules/
-      }
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader'],
+        exclude: /node_modules/
+      },
+
+      { test: /\.woff$/,   loader: "null" },
+      { test: /\.woff2$/,  loader: "null" },
+      { test: /\.ttf$/,    loader: "null" },
+      { test: /\.eot$/,    loader: "null" },
+      { test: /\.svg$/,    loader: "null" }
     ]
   },
   plugins: [

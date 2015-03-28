@@ -1,0 +1,29 @@
+{
+    "currentEvents": [
+        {
+            "id": "event_content_creation_after",
+            "title": "After saving new content"
+        }
+    ],
+
+    "currentConditions": [
+        {
+            "id": "condition_content_type",
+            "title": "Content is of type",
+            "parameters": {
+                "content": "[node]",
+                "content types": "articles"
+            }
+        }
+    ],
+
+    "currentActions": [
+        {
+            "id": "action_site_message_show",
+            "title": "Show a message on the site",
+            "parameters": {
+                "message": "foo bar baz quux"
+            }
+        }
+    ]
+}

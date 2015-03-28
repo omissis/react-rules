@@ -1,0 +1,22 @@
+table thead {
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+.title {
+    color: #337ab7;
+}
+
+.parameter {
+    color: #999;
+    font-style: italic;
+}
+
+.add:before {
+    content: " + ";
+}
+
+.operation {
+    font-weight: bold;
+    margin-right: 10px;
+}
