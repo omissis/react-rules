@@ -28,7 +28,6 @@
     "babel-core": "^4.6.6",
     "babel-eslint": "^2.0.2",
     "babel-loader": "^4.0.0",
-    "css-loader": "~0.9.1",
     "eslint": "^0.17.1",
     "karma": "^0.12.31",
     "karma-chrome-launcher": "^0.1.7",
@@ -41,8 +40,10 @@
     "react-hot-loader": "^1.1.4",
     "react-router": "~0.13.1",
     "rf-changelog": "^0.4.0",
+    "css-loader": "~0.9.1",
     "sass-loader": "^0.5.0",
     "style-loader": "^0.8.3",
+    "null-loader": "^0.1.1",
     "webpack": "^1.5.3",
     "webpack-dev-server": "1.7.0"
   }
