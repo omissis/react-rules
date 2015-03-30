@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react';
 
 import OperationButton from './OperationButton';
@@ -13,13 +15,13 @@ class TableRow extends React.Component {
         let operations = [];
         let component = this.props.component;
         let componentName = this.props.componentName;
-        let componentParameters = "";
-        let classString = component + " title";
+        let componentParameters = '';
+        let classString = component + ' title';
 
         if (this.props.component.parameters) {
             for (let parameter in this.props.component.parameters) {
                 if (this.props.component.parameters.hasOwnProperty(parameter)) {
-                    componentParameters += parameter + ": " + this.props.component.parameters[parameter] + " ";
+                    componentParameters += parameter + ': ' + this.props.component.parameters[parameter] + ' ';
                 }
             }
         }
@@ -46,6 +48,6 @@ class TableRow extends React.Component {
             </tr>
         );
     }
-};
+}
 
 export default TableRow;

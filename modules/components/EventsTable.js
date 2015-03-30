@@ -1,13 +1,14 @@
+'use strict';
+
 import React from 'react';
 
 import TableRow from './TableRow';
 
 class EventsTable extends React.Component {
     render() {
-        let events = this.props.events;
         let rows = [];
-        let componentName = "event";
-        let operations = ["edit", "delete"];
+        let componentName = 'event';
+        let operations = ['edit', 'delete'];
 
         this.props.currentEvents.forEach(function (event, index) {
             rows.push(<TableRow key={index} componentName={componentName} component={event} operations={operations} />);
@@ -34,7 +35,7 @@ class EventsTable extends React.Component {
             </table>
         );
     }
-};
+}
 
 EventsTable.defaultProps = { currentEvents: [] };
 

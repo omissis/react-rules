@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react';
 
 import TableRow from './TableRow';
@@ -11,8 +13,8 @@ class ActionsTable extends React.Component {
 
     render() {
         let rows = [];
-        let componentName = "action";
-        let operations = ["edit", "delete"];
+        let componentName = 'action';
+        let operations = ['edit', 'delete'];
 
         this.props.currentActions.forEach(function (action, index) {
             rows.push(<TableRow key={index} componentName={componentName} component={action} operations={operations} />);
@@ -33,7 +35,7 @@ class ActionsTable extends React.Component {
                     <tr className="info">
                         <td colSpan="42">
                             <a className="action add operation" href="#action-add">add action</a>
-                            <a className="action loop add operation"  href="#action-loop-add">add loop</a>
+                            <a className="action loop add operation" href="#action-loop-add">add loop</a>
                         </td>
                     </tr>
                 </tfoot>

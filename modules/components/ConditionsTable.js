@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react';
 
 import TableRow from './TableRow';
@@ -11,8 +13,8 @@ class ConditionsTable extends React.Component {
 
     render() {
         let rows = [];
-        let componentName = "condition";
-        let operations = ["edit", "delete"];
+        let componentName = 'condition';
+        let operations = ['edit', 'delete'];
 
         this.props.currentConditions.forEach(function (condition, index) {
             rows.push(<TableRow key={index} componentName={componentName} component={condition} operations={operations} />);
@@ -32,15 +34,15 @@ class ConditionsTable extends React.Component {
                 <tfoot>
                     <tr className="info">
                         <td colSpan="42">
-                            <a className="condition add operation"  href="#condition-add">add condition</a>
-                            <a className="condition or add operation"  href="#condition-or-add">add or</a>
-                            <a className="condition and add operation"  href="#condition-and-add">add and</a>
+                            <a className="condition add operation" href="#condition-add">add condition</a>
+                            <a className="condition or add operation" href="#condition-or-add">add or</a>
+                            <a className="condition and add operation" href="#condition-and-add">add and</a>
                         </td>
                     </tr>
                 </tfoot>
             </table>
         );
     }
-};
+}
 
 export default ConditionsTable;
